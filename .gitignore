@@ -1,0 +1,6 @@
+*.ini
+*.cph
+*.bin
+*.o
+*.exe
+*.vscode
