@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 int timer = 1;
 void dfs(int src, vector<vector<int>> &g, vector<int> &t, vector<int> &low, vector<bool> &visited, int parent)
 {
@@ -28,6 +29,11 @@ int main()
 {
     int V, E;
     cin >> V >> E;
+    if (E == 0)
+    {
+        cout << "No Bridges" << endl;
+        return 0;
+    }
 
     vector<vector<int>> g(V);
 
