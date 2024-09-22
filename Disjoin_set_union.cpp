@@ -12,7 +12,7 @@ int find_p(int d, vector<int> par)
         return d;
     else
 
-        return pa[d] = find_p(par[d], par);
+        return par[d] = find_p(par[d], par);
 }
 void unite(int a, int b, vector<int> &par)
 {
