@@ -13,19 +13,20 @@ int main()
 
     int arr[] = {1, 4, 7, 2, 3, 6, 9, 1};
 
-    int n = sizeof(arr)/sizeof(arr[0]);
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int min_ind;
 
-    for (int i = 0; i < n-1; i++)
+    for (int i = 0; i < n; i++)
     {
+        min_ind = i;
         for (int j = i + 1; j < n; j++)
         {
-            if (arr[i] > arr[j])
-            {
-                swap(arr[i], arr[j]);
-            }
+            if (arr[j] < arr[min_ind])
+                min_ind = j;
         }
-    }
 
+        swap(arr[i], arr[min_ind]);
+    }
     cout << "sorted - " << endl;
 
     for (int i = 0; i < n; i++)
@@ -33,6 +34,5 @@ int main()
         cout << arr[i] << " ";
     }
     cout << endl;
-
     return 0;
 }
