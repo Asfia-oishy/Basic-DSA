@@ -24,7 +24,7 @@ int main()
         int pi = pq.top().second.first;
         pq.pop();
 
-        if (w > wi)
+        if (w >= wi)
         {
             total += pi;
         }
