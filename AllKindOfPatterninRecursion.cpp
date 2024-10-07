@@ -28,7 +28,6 @@ int main()
 }
 */
 
-
 /*
 // subseq with sum k
 void func(int ind, int sum, vector<int> &v, int len, vector<int> &ans, int k)
@@ -64,7 +63,7 @@ int main()
 }
 */
 
-//total ways
+// total ways
 int func(int ind, int sum, vector<int> &v, int len, int k)
 {
     if (ind == len)
@@ -80,16 +79,17 @@ int func(int ind, int sum, vector<int> &v, int len, int k)
     int l = func(ind + 1, sum, v, len, k);
     sum -= v[ind];
     int r = func(ind + 1, sum, v, len, k);
-    return l+r;
+    return l + r;
 }
 
 int main()
 {
-    vector<int> v = {1, 2, 1};
+    vector<int> v = {2, 1, 4, 3};
 
     int n = v.size();
-    int k = 2;
-    cout<<func(0, 0, v, n, k)<<endl;;
+    int k = 4;
+    cout << func(0, 0, v, n, k) << endl;
+    ;
 
     return 0;
 }
